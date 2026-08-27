@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Dock from './components/Dock'
 import FoldText from './components/FoldText'
+import IdentityPulseField from './components/IdentityPulseField'
 import ProjectAccordion from './components/ProjectAccordion'
 import Radar from './components/Radar'
 import SpecularButton from './components/SpecularButton'
@@ -108,7 +109,7 @@ export default function App() {
     <section className="about-section atlas-section" id="about" data-section>
       <div className="atlas-content atlas-content--wide about-layout scroll-reveal">
         <SectionMark number="02" label="IDENTITY ORIGIN" />
-        <div className="identity-origin"><div className="identity-origin__orbit" /><img src="/berrybluegel.png" alt="BerryBlueGel 个人图标" /><span>IDENTITY<br />ORIGIN</span></div>
+        <div className="identity-origin"><div className="identity-origin__orbit" /><IdentityPulseField /><img src="/berrybluegel.png" alt="BerryBlueGel 个人图标" /><span>IDENTITY<br />ORIGIN</span></div>
         <article className="about-copy">
           <p className="eyebrow">ABOUT / WEBGIS · GIS</p>
           <h2>从 GIS 基础，<br />走向数字地图。</h2>

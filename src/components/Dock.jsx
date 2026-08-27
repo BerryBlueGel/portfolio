@@ -67,7 +67,7 @@ export default function Dock({ items, activeHref }) {
 
   return <nav className="dock-nav" aria-label="主要导航">
     <div ref={panelRef} className="dock-panel" onPointerMove={(event) => mouseX.set(event.clientX)} onPointerLeave={() => mouseX.set(Infinity)}>
-      {items.map((item) => <DockItem key={item.href} item={item} activeHref={activeHref} mouseX={mouseX} baseItemSize={68} magnification={84} distance={185} />)}
+      {items.map((item) => <DockItem key={item.href} item={item} activeHref={activeHref} mouseX={mouseX} baseItemSize={56} magnification={68} distance={150} />)}
     </div>
   </nav>
 }

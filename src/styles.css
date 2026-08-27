@@ -15,6 +15,18 @@
 
 .contact-compass::before,.contact-compass::after,.contact-compass i,.contact-compass b{z-index:1}
 
+/* Large desktops should be comfortable at the browser's default 100% zoom. */
+@media(min-width:1451px){
+  .atlas-content{width:min(calc(100% - var(--rail) - 112px),1420px);margin-left:max(calc((100vw - 1560px)/2 + var(--rail)),calc(var(--rail) + 56px));margin-right:56px}
+  .atlas-content--wide{width:min(calc(100% - var(--rail) - 88px),1540px);margin-left:max(calc((100vw - 1560px)/2 + 44px),calc(var(--rail) + 44px));margin-right:44px}
+  .hero-content{padding-bottom:92px}.hero-content h1{max-width:790px;font-size:clamp(58px,6vw,104px)}
+  .hero-summary{margin-top:34px}.hero-node{font-size:16px}.hero-node::before{width:28px;height:28px;box-shadow:inset 0 0 0 7px #fff8}.hero-node::after{left:14px;width:94px}
+  .section-heading h2,.contact-layout h2{font-size:clamp(50px,4.5vw,76px)}
+  .about-layout{grid-template-columns:minmax(330px,.9fr) minmax(480px,1.1fr);gap:clamp(64px,8vw,160px)}
+  .identity-origin{width:min(100%,430px)}.about-copy{max-width:660px}.about-copy h2{font-size:clamp(58px,5.2vw,92px)}
+  .about-copy>p:not(.eyebrow){margin:26px 0;font-size:15px}.about-copy dl{margin-top:30px;padding-top:20px}
+  .contact-layout{padding:112px 0 76px}.contact-layout h2{max-width:760px}.contact-intro{margin:27px 0 25px}.contact-compass{right:-3vw;width:min(42vw,616px)}
+}
 
-
-
+/* The avatar is a stable centre; the exterior layers open toward the pointer. */
+.identity-origin{--inner-x:0px;--inner-y:0px;--main-x:0px;--main-y:0px;--orbit-x:0px;--orbit-y:0px;--label-x:0px;--label-y:0px;--pulse-x:0px;--pulse-y:0px;isolation:isolate}.identity-origin::before,.identity-origin::after,.identity-origin__orbit{z-index:1;pointer-events:none;transition:transform .62s cubic-bezier(.22,1,.36,1)}.identity-origin::before{transform:translate(var(--main-x),var(--main-y)) scale(1)}.identity-origin::after{transform:translate(var(--inner-x),var(--inner-y)) scale(1)}.identity-origin__orbit{transform:translate(var(--orbit-x),var(--orbit-y)) rotate(-28deg) scale(1)}.identity-origin img{z-index:3;transform:none}.identity-origin>span{z-index:3;transform:translate(var(--label-x),var(--label-y));transition:transform .56s cubic-bezier(.22,1,.36,1)}.identity-origin__pulse-field{position:absolute;z-index:2;inset:28%;border-radius:50%;pointer-events:none;transform:translate(var(--pulse-x),var(--pulse-y)) scale(1);transition:transform .5s cubic-bezier(.22,1,.36,1)}.identity-origin__pulse-field i{position:absolute;inset:0;border:1px solid rgb(34 107 255/.32);border-radius:50%;opacity:0;animation:identity-pulse 5.4s cubic-bezier(.18,.7,.25,1) infinite}.identity-origin__pulse-field i:nth-child(2){animation-delay:-1.8s}.identity-origin__pulse-field i:nth-child(3){animation-delay:-3.6s}@keyframes identity-pulse{0%{transform:scale(.78);opacity:.42}62%{opacity:.16}100%{transform:scale(1.72);opacity:0}}.identity-origin.is-pulse-hover::before{transform:translate(var(--main-x),var(--main-y)) scale(1.07)}.identity-origin.is-pulse-hover::after{transform:translate(var(--inner-x),var(--inner-y)) scale(1.04)}.identity-origin.is-pulse-hover .identity-origin__orbit{transform:translate(var(--orbit-x),var(--orbit-y)) rotate(-28deg) scale(1.13)}.identity-origin.is-pulse-hover .identity-origin__pulse-field{transform:translate(var(--pulse-x),var(--pulse-y)) scale(1.1)}@media(prefers-reduced-motion:reduce){.identity-origin::before,.identity-origin::after,.identity-origin__orbit,.identity-origin>span,.identity-origin__pulse-field{transition:none}.identity-origin__pulse-field i{animation-play-state:paused}}
