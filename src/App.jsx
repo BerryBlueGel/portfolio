@@ -46,6 +46,7 @@ function SectionMark({ number, label }) {
 
 export default function App() {
   const [active, setActive] = useState('#home')
+  const [contactOpen, setContactOpen] = useState(false)
   const siteRef = useRef(null)
 
   useEffect(() => {
@@ -134,12 +135,14 @@ export default function App() {
         <div className="contact-copy">
           <p className="eyebrow">CONTACT / 05</p>
           <h2>从一个坐标点，<br />开始下一段合作。</h2>
-          <dl className="contact-details" aria-label="联系方式">
-            <div><dt>QQ</dt><dd>3554329421</dd></div>
-            <div><dt>EMAIL</dt><dd><a href="mailto:3554329421@qq.com">3554329421@qq.com</a></dd></div>
+          <dl className="contact-details" aria-label="GitHub 主页">
             <div><dt>GITHUB</dt><dd><a href="https://github.com/BerryBlueGel" target="_blank" rel="noopener noreferrer">github.com/BerryBlueGel <span aria-hidden="true">↗</span></a></dd></div>
           </dl>
-          <SpecularButton href="mailto:3554329421@qq.com">发起联系 <span>↗</span></SpecularButton>
+          <SpecularButton onClick={() => setContactOpen((open) => !open)} ariaExpanded={contactOpen} ariaControls="contact-numbers">发起联系 <span aria-hidden="true">{contactOpen ? '−' : '↗'}</span></SpecularButton>
+          <dl className="contact-details contact-details--numbers" id="contact-numbers" aria-label="QQ 和 QQ 邮箱" hidden={!contactOpen}>
+            <div><dt>QQ</dt><dd>3554329421</dd></div>
+            <div><dt>QQ 邮箱</dt><dd>3554329421@qq.com</dd></div>
+          </dl>
         </div>
         <div className="contact-compass" aria-hidden="true"><Radar /><i /><i /><i /><b /></div>
         <footer>BerryBlueGel <span>·</span> WEBGIS / GIS <em>END OF INDEX / 05</em></footer>
