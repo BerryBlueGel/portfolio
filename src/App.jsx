@@ -46,7 +46,6 @@ function SectionMark({ number, label }) {
 
 export default function App() {
   const [active, setActive] = useState('#home')
-  const [contactOpen, setContactOpen] = useState(false)
   const siteRef = useRef(null)
 
   useEffect(() => {
@@ -114,7 +113,7 @@ export default function App() {
           <p className="eyebrow">ABOUT / WEBGIS · GIS</p>
           <h2>从 GIS 基础，<br />走向数字地图。</h2>
           <p>我关注空间数据的整理、表达与交互，让地图不只呈现位置，也能支持理解与决策。目前正沿着 WebGIS / GIS 开发方向持续学习与实践。</p>
-          <dl><dt>方向</dt><dd>WebGIS / GIS Development</dd><dt>关注</dt><dd>Data · Map · Web</dd><dt>状态</dt><dd>寻找学习与实践机会</dd></dl>
+          <dl><dt>方向</dt><dd>WebGIS / GIS Development</dd><dt>关注</dt><dd>Data · Map · Web</dd></dl>
         </article>
         <div className="data-route" aria-label="技能路径"><span>DATA</span><i /><span>MAP</span><i /><span>WEB</span></div>
       </div>
@@ -132,7 +131,16 @@ export default function App() {
       <Topography className="contact-topography" passive />
       <div className="atlas-content contact-layout scroll-reveal">
         <SectionMark number="05" label="END OF INDEX" />
-        <div><p className="eyebrow">CONTACT / 05</p><h2>从一个坐标点，<br />开始下一段合作。</h2><p className="contact-intro">期待 WebGIS / GIS 方向的学习、协作与实践机会。</p><SpecularButton onClick={() => setContactOpen((open) => !open)} ariaExpanded={contactOpen}>发起联系 <span>↗</span></SpecularButton><div className={`contact-options ${contactOpen ? 'is-open' : ''}`} id="contact-options"><span>EMAIL <em>待补充</em></span><span>GITHUB <em>待补充</em></span><span>WECHAT <em>待补充</em></span></div></div>
+        <div className="contact-copy">
+          <p className="eyebrow">CONTACT / 05</p>
+          <h2>从一个坐标点，<br />开始下一段合作。</h2>
+          <dl className="contact-details" aria-label="联系方式">
+            <div><dt>QQ</dt><dd>3554329421</dd></div>
+            <div><dt>EMAIL</dt><dd><a href="mailto:3554329421@qq.com">3554329421@qq.com</a></dd></div>
+            <div><dt>GITHUB</dt><dd><a href="https://github.com/BerryBlueGel" target="_blank" rel="noopener noreferrer">github.com/BerryBlueGel <span aria-hidden="true">↗</span></a></dd></div>
+          </dl>
+          <SpecularButton href="mailto:3554329421@qq.com">发起联系 <span>↗</span></SpecularButton>
+        </div>
         <div className="contact-compass" aria-hidden="true"><Radar /><i /><i /><i /><b /></div>
         <footer>BerryBlueGel <span>·</span> WEBGIS / GIS <em>END OF INDEX / 05</em></footer>
       </div>
