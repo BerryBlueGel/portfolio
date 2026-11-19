@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap');
 
+@media (max-width: 760px) {
+  .atlas-site .identity-rail { backdrop-filter: none; }
+}
+
 .contact-copy{position:relative;z-index:2}
 .contact-details{width:min(100%,440px);margin:32px 0 28px;padding:18px 0;border-top:1px solid #b7d2ef;border-bottom:1px solid #b7d2ef}
 .contact-details>div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;align-items:baseline;padding:7px 0}

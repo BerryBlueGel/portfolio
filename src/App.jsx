@@ -18,9 +18,33 @@ const navigation = [
 ]
 
 const projects = [
-  { id: '01', title: '空间查询与分析', subtitle: 'Vue 3 · OpenLayers · GeoJSON', image: '/projects/spatial-query.png', alt: '蓝白色空间查询地图视觉', description: '通过图层、筛选与基础空间分析组织可读的地图交互。' },
-  { id: '02', title: '数据处理与服务发布', subtitle: 'QGIS · GeoServer · WMS/WFS', image: '/projects/data-layers.png', alt: '蓝白色空间数据图层转换视觉', description: '梳理从空间数据处理、格式转换到在线地图服务的工作流。' },
-  { id: '03', title: '前端交互练习', subtitle: 'Vue 3 · TypeScript', image: '/projects/frontend-practice.png', alt: '蓝白色前端应用交互视觉', description: '持续练习组件化、状态组织和清晰的信息表达。' }
+  {
+    id: '01',
+    title: '华北理工数字校园',
+    subtitle: 'MapLibre · Three.js · PostGIS',
+    image: '/projects/ncst-campus-poster.jpg',
+    alt: '数字校园概念海报，斜俯视图书馆、校园中轴和环绕水系',
+    description: '在同一校园场景中浏览二维地图、三维建筑与地标，并开展空间分析。',
+    href: 'https://ncstgeo.cn/'
+  },
+  {
+    id: '02',
+    title: 'GeoSandbox',
+    subtitle: 'React · MapLibre · CesiumJS',
+    image: '/projects/geosandbox-poster.jpg',
+    alt: 'GeoSandbox 概念海报，三个建筑模型与矢量、影像图层分层对齐',
+    description: '导入空间数据、定位与装配三维模型，再将成果导出为可重开的项目包。',
+    href: 'https://geosandbox.top/'
+  },
+  {
+    id: '03',
+    title: '武汉 GeoHub',
+    subtitle: 'OpenLayers · Turf.js · PostGIS',
+    image: '/projects/wuhan-geohub-poster.jpg',
+    alt: '武汉 GeoHub 概念海报，蓝色缓冲圈覆盖江岸，橙色点表示示意 POI',
+    description: '在武汉城市资源地图中筛选兴趣点，并同屏查看 Turf.js 与 PostGIS 的缓冲区分析结果。',
+    href: 'https://github.com/BerryBlueGel/wuhan-geohub'
+  }
 ]
 
 const methods = [
